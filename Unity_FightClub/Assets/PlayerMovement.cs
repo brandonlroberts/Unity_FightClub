@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 40f;
 
     float horizontalMove = 0f;
+    bool jump = false;
 
 
     // Update is called once per frame
@@ -18,11 +19,17 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+        if (Input.GetButtonDown("Jump"))
+            {
+
+            jump = true;
+        }
+
     }
     void FixedUpdate()
     {
 
-        Controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
-
+        Controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        jump = false;
     }
 }
