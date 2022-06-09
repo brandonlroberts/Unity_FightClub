@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 254829052}
   - component: {fileID: 254829051}
   - component: {fileID: 254829055}
+  - component: {fileID: 254829056}
   m_Layer: 6
   m_Name: knight
   m_TagString: Untagged
@@ -415,8 +416,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025681585, y: -0.1}
-  m_Size: {x: 0.54224604, y: 0.5422461}
+  m_Offset: {x: 0.025681585, y: -0.1279676}
+  m_Size: {x: 0.54224604, y: 0.59818125}
   m_Direction: 0
 --- !u!50 &254829053
 Rigidbody2D:
@@ -451,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e860d6d3417df7f46af38f1616d5d298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 700
+  m_JumpForce: 550
   m_CrouchSpeed: 0.41
   m_MovementSmoothing: 0.05
   m_AirControl: 0
@@ -480,7 +481,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controller: {fileID: 254829054}
+  animator: {fileID: 254829056}
   runSpeed: 40
+--- !u!95 &254829056
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254829048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd5074909c693a44592b35babc582b13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &410743008
 GameObject:
   m_ObjectHideFlags: 0
